@@ -1,0 +1,617 @@
+body {
+  padding: 15px;
+  padding-top: 90px;
+  background-color: #111111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: "Clash"; /* Helvetica Neue */
+  font-weight: 300;
+  scroll-behavior: smooth;
+  scroll-margin-top: 500px;
+}
+
+@font-face {
+  font-family: "Clash";
+  src: url("Assets/fonts/ClashGrotesk-Variable.ttf")
+    format("truetype-variations");
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-family: "Clash-Semibold";
+  src: url(Assets/fonts/ClashGrotesk-Semibold.ttf);
+}
+
+/* ---------------------------------------------------------- Navigation #1 ---------------------------------------------------------- */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .navigation {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #11111175;
+  }
+}
+
+.navigation {
+  color: white;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 50;
+  padding: 20px;
+}
+
+.nav-bar-line {
+  border: 1px solid whitesmoke;
+  opacity: 1;
+  margin-top: 16px;
+  width: calc(100vw - 530px);
+}
+
+.nav-logo-text {
+  line-height: 1;
+  font-size: 1.4rem; /* 1.3rem */
+  font-weight: 500;
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 100px;
+  border: 2px solid white;
+  transition: ease 0.3s;
+}
+
+.nav-logo-text:hover {
+  color: black;
+  border: 2px solid white;
+  background-color: white;
+  transition: ease 0.3s;
+}
+
+.nav-logo-img {
+  width: 40px;
+  line-height: 1;
+  font-size: 1.4rem; /* 1.3rem */
+  font-weight: 500;
+  float: left;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  transition: ease 0.3s;
+  border-radius: 50%;
+}
+
+.nav-logo-img:hover {
+  transition: ease 0.3s;
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.nav-tabs {
+  float: right;
+}
+
+.nav-tabs-text {
+  line-height: 1;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav-tabs-text:hover {
+  opacity: 0.5;
+  transition: ease 0.3s;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* ---------------------------------------------------------- Mid Container ---------------------------------------------------------- */
+.mid-container {
+  font-size: 5rem;
+  margin-top: -20px;
+  margin-left: -25px;
+  padding-top: 10px;
+  background-color: whitesmoke;
+  width: 100vw;
+  min-height: 89vh;
+}
+
+.mid-div {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  /* width: 100%;  50% */
+}
+
+.mid-img {
+  width: 90%;
+  height: 20vw;
+  object-fit: contain;
+  background-color: transparent;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.mid-title-1 {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 1.7em;
+  line-height: 0.8em;
+  text-align: left;
+  font-weight: 450;
+  color: black;
+  transition: font-weight 0.45s ease-out;
+}
+
+.mid-title-1:hover {
+  font-weight: 650;
+  transition: font-weight 0.45s ease-out;
+}
+
+.mid-title-2 {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 1.7em;
+  line-height: 0.8em;
+  text-align: left;
+  font-weight: 450;
+  color: #818181;
+  transition: font-weight 0.45s ease-out;
+}
+.mid-title-2:hover {
+  font-weight: 650;
+  transition: font-weight 0.45s ease-out;
+}
+
+.mid-title-3 {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 1.7em;
+  line-height: 0.8em;
+  text-align: left;
+  font-weight: 450;
+  color: #b7b7b7;
+  transition: font-weight 0.45s ease-out;
+}
+.mid-title-3:hover {
+  font-weight: 650;
+  transition: font-weight 0.45s ease-out;
+}
+
+.mid-title-4 {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 1.7em;
+  line-height: 0.8em;
+  text-align: left;
+  font-weight: 450;
+  color: #e1e1e1;
+  transition: font-weight 0.45s ease-out;
+}
+.mid-title-4:hover {
+  font-weight: 650;
+  transition: font-weight 0.45s ease-out;
+}
+
+.mid-subtitle {
+  font-size: 0.6em;
+  line-height: auto;
+  text-align: left;
+  font-weight: 400;
+  color: #b7b7b7;
+  word-wrap: break-word;
+}
+
+.divider-line {
+  border: 0.5px solid rgb(122, 122, 122);
+  opacity: 0;
+  margin-left: -30px;
+  display: block;
+  width: 100vw;
+}
+
+/* ---------------------------------------------------------- Video Library ---------------------------------------------------------- */
+.library-container {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.library-title-container {
+  display: block;
+  width: 100%;
+}
+
+.library-title {
+  color: whitesmoke;
+  /* font-family: 'Clash-regular'; */
+  font-weight: 600;
+  margin-top: 5%;
+  margin-left: 15px;
+  line-height: 0;
+  text-align: center;
+  font-size: 14vw;
+}
+
+.library-title-1 {
+  color: transparent;
+  font-family: "Clash-Semibold";
+  font-weight: 600;
+  margin-left: 15px;
+  line-height: 1;
+  text-align: center;
+  font-size: 10vw;
+  margin-top: 8%;
+  margin-bottom: 3%;
+  -webkit-text-stroke: 2px white;
+}
+
+.line-fw {
+  border: 2px solid rgb(172, 172, 172);
+  width: 100%;
+}
+
+.library-video-container {
+  margin: 10px;
+  padding: 10px;
+  float: left;
+  width: calc(33% - 40px);
+  padding-bottom: 0px;
+  transition: 0.3s ease;
+  /* border-radius: 10px; */
+  /* background-color: red; */
+}
+
+.library-video {
+  object-fit: cover;
+  height: auto;
+  max-height: 250px;
+  width: 100%;
+  /* border-radius: 10px; */
+
+  transition: 0.5s ease;
+}
+
+.library-video:hover {
+  transform: scale(1.02);
+  transition: 0.5s ease;
+  cursor: pointer;
+  box-shadow: 0px 0px 25px black;
+}
+
+.library-video-title {
+  color: white;
+  font-size: 2vw;
+  line-height: 1;
+  font-weight: 500;
+  margin-top: 10px;
+  float: inline-start;
+}
+
+.library-video-description {
+  color: white;
+  font-size: 1vw;
+  line-height: 1;
+  margin-top: 10px;
+  font-weight: 400;
+  float: left;
+  border-radius: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid white;
+  opacity: 0.4;
+  float: inline-end;
+}
+
+/* ---------------------------------------------------------- Footer ---------------------------------------------------------- */
+.footer {
+  background-color: inherit;
+}
+
+.footer-content {
+  color: white;
+  text-align: center;
+  font-size: 1vw;
+  line-height: 1;
+  font-weight: 500;
+  width: 10%;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: ease 0.2s;
+  opacity: 0.7;
+}
+
+.footer-content:hover {
+  opacity: 0.4;
+  transition: ease 0.2s;
+}
+
+/* ---------------------------------------------------------- Impressum ---------------------------------------------------------- */
+.impressum {
+  background-color: inherit;
+  border-radius: 20px;
+  padding: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  margin-top: 10vw;
+}
+
+.impressum-title {
+  color: rgb(87, 87, 87);
+  font-size: 2.2rem;
+  line-height: auto;
+  font-weight: 400;
+  text-align: left;
+  transition: ease 0.2s;
+  margin-bottom: 0;
+}
+
+.impressum-text {
+  color: white;
+  font-size: 2.2rem;
+  line-height: 1.2em;
+  font-weight: 400;
+  text-align: left;
+  transition: ease 0.2s;
+}
+
+/* =============================================================== MOBILE =============================================================== */
+@media screen and (max-width: 902px) {
+  /* ---------------------------------------------------------- Navigation #1 ---------------------------------------------------------- */
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .navigation {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: #11111175;
+    }
+  }
+
+  .nav-bar-line {
+    border: 1px solid whitesmoke;
+    opacity: 1;
+    margin-top: 16px;
+    width: calc(100vw - 500px);
+    display: none;
+  }
+
+  .nav-logo-text {
+    line-height: 1;
+    font-size: 1.4rem; /* 1.3rem */
+    font-weight: 500;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 100px;
+    border: 2px solid white;
+    transition: ease 0.3s;
+  }
+
+  .nav-logo-text:hover {
+    color: black;
+    border: 2px solid white;
+    background-color: white;
+    transition: ease 0.3s;
+  }
+
+  .nav-logo-img {
+    width: 45px;
+    line-height: 1;
+    font-size: 1.4rem; /* 1.3rem */
+    font-weight: 500;
+    float: left;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: ease 0.3s;
+    border-radius: 50%;
+  }
+
+  .nav-tabs {
+    float: right;
+    height: 45px;
+  }
+
+  .nav-tabs-text {
+    line-height: 1;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: sticky;
+    top: 25px;
+  }
+
+  /* ---------------------------------------------------------- Mid Container ---------------------------------------------------------- */
+  .mid-container {
+    font-size: 3rem;
+    margin-top: -20px;
+    margin-left: -25px;
+    padding-top: 1px;
+    background-color: whitesmoke;
+    width: 100vw;
+    min-height: 89vh;
+  }
+
+  .mid-title-1 {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: 1.7em;
+    line-height: 0.8em;
+    text-align: left;
+    font-weight: 450;
+    color: black;
+    transition: font-weight 0.45s ease-out;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .mid-title-2 {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: 1.7em;
+    line-height: 0.8em;
+    text-align: left;
+    font-weight: 450;
+    color: #818181;
+    transition: font-weight 0.45s ease-out;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .mid-title-3 {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: 1.7em;
+    line-height: 0.8em;
+    text-align: left;
+    font-weight: 450;
+    color: #b7b7b7;
+    transition: font-weight 0.45s ease-out;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .mid-subtitle {
+    font-size: 0.8em;
+    line-height: auto;
+    text-align: left;
+    font-weight: 400;
+    color: #b7b7b7;
+    word-wrap: break-word;
+    margin-top: 50px;
+  }
+
+  .divider-line {
+    border: 0.5px solid rgb(122, 122, 122);
+    opacity: 0;
+    margin-left: -30px;
+    display: block;
+    width: 100vw;
+  }
+
+  /* ---------------------------------------------------------- Video Library ---------------------------------------------------------- */
+  .library-title-1 {
+    color: transparent;
+    font-family: "Clash-Semibold";
+    font-weight: 600;
+    margin-left: 15px;
+    line-height: 1;
+    text-align: center;
+    font-size: 10vw;
+    margin-top: 8%;
+    margin-bottom: 3%;
+    -webkit-text-stroke: 0.3px white;
+  }
+  .library-container {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+    display: inline-block;
+  }
+
+  .library-title-container {
+    display: block;
+    width: 100%;
+  }
+
+  .library-video-container {
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    width: calc(100% - 40px);
+    padding-bottom: 0px;
+    transition: 0.3s ease;
+    /* border-radius: 10px; */
+    /* background-color: red; */
+  }
+
+  .library-video {
+    height: auto;
+    width: 100%;
+    /* border-radius: 10px; */
+    object-fit: contain;
+    opacity: 0.3;
+    transition: 0.5s ease;
+  }
+
+  .library-video-title {
+    color: white;
+    font-size: 6vw;
+    line-height: 1;
+    font-weight: 500;
+    margin-top: 10px;
+    float: inline-start;
+  }
+
+  .library-video-description {
+    color: white;
+    font-size: 3vw;
+    line-height: 1;
+    margin-top: 10px;
+    font-weight: 400;
+    float: left;
+    border-radius: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid white;
+    opacity: 0.4;
+    float: inline-end;
+  }
+
+  /* ---------------------------------------------------------- Footer ---------------------------------------------------------- */
+  .footer {
+    background-color: inherit;
+    min-width: 10%;
+  }
+
+  .footer-content {
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+    line-height: 1;
+    font-weight: 500;
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: ease 0.2s;
+    opacity: 0.7;
+  }
+
+  .footer-content:hover {
+    opacity: 0.4;
+    transition: ease 0.2s;
+  }
+}
