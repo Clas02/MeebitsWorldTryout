@@ -28,7 +28,7 @@ body {
 /* ---------------------------------------------------------- Navigation #1 ---------------------------------------------------------- */
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .navigation {
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(60px);
     backdrop-filter: blur(10px);
     background-color: #11111175;
   }
@@ -42,6 +42,7 @@ body {
   position: fixed;
   z-index: 50;
   padding: 20px;
+  border-radius: 0px 0px 15px 15px;
 }
 
 .nav-bar-line {
@@ -120,12 +121,12 @@ a {
 /* ---------------------------------------------------------- Mid Container ---------------------------------------------------------- */
 .mid-container {
   font-size: 5rem;
-  margin-top: -20px;
+  margin-top: -10px;
   margin-left: -25px;
   padding-top: 10px;
   background-color: whitesmoke;
   width: 100vw;
-  min-height: 89vh;
+  height: calc(100vh - 80px);
 }
 
 .mid-div {
@@ -283,19 +284,17 @@ a {
 
 .library-video {
   object-fit: cover;
-  height: auto;
-  max-height: 250px;
+  height: 250px;
   width: 100%;
-  /* border-radius: 10px; */
-
+  border-radius: 10px;
   transition: 0.5s ease;
+  border: 2px solid transparent;
 }
 
 .library-video:hover {
-  transform: scale(1.02);
   transition: 0.5s ease;
   cursor: pointer;
-  box-shadow: 0px 0px 25px black;
+  border: 2px solid white;
 }
 
 .library-video-title {
@@ -327,6 +326,8 @@ a {
 /* ---------------------------------------------------------- Footer ---------------------------------------------------------- */
 .footer {
   background-color: inherit;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-content {
@@ -335,8 +336,8 @@ a {
   font-size: 1vw;
   line-height: 1;
   font-weight: 500;
-  width: 10%;
-  padding: 5px;
+  width: 100%;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto;
   transition: ease 0.2s;
@@ -451,7 +452,7 @@ a {
   /* ---------------------------------------------------------- Mid Container ---------------------------------------------------------- */
   .mid-container {
     font-size: 3rem;
-    margin-top: -20px;
+    margin-top: -10px;
     margin-left: -25px;
     padding-top: 1px;
     background-color: whitesmoke;
@@ -557,9 +558,8 @@ a {
   .library-video {
     height: auto;
     width: 100%;
-    /* border-radius: 10px; */
-    object-fit: contain;
-    opacity: 0.3;
+    border-radius: 10px;
+    object-fit: cover;
     transition: 0.5s ease;
   }
 
