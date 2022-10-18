@@ -450,19 +450,19 @@ a {
 
   /* ---------------------------------------------------------- Mid Container ---------------------------------------------------------- */
   .mid-container {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-top: -10px;
     margin-left: -25px;
     padding-top: 1px;
     background-color: whitesmoke;
     width: 100vw;
-    min-height: 89vh;
+    min-height: 91vh;
   }
 
   .mid-title-1 {
     margin-top: 70px;
     margin-bottom: 70px;
-    font-size: 1.7em;
+    font-size: inherit;
     line-height: 0.8em;
     text-align: left;
     font-weight: 450;
@@ -475,7 +475,7 @@ a {
   .mid-title-2 {
     margin-top: 70px;
     margin-bottom: 70px;
-    font-size: 1.7em;
+    font-size: inherit;
     line-height: 0.8em;
     text-align: left;
     font-weight: 450;
@@ -488,7 +488,7 @@ a {
   .mid-title-3 {
     margin-top: 70px;
     margin-bottom: 70px;
-    font-size: 1.7em;
+    font-size: inherit;
     line-height: 0.8em;
     text-align: left;
     font-weight: 450;
@@ -499,12 +499,12 @@ a {
   }
 
   .mid-subtitle {
-    font-size: 0.8em;
+    font-size: 2rem;
     line-height: auto;
     text-align: left;
     font-weight: 400;
     color: #b7b7b7;
-    word-wrap: break-word;
+
     margin-top: 50px;
   }
 
