@@ -11,6 +11,7 @@ body {
   font-weight: 300;
   scroll-behavior: smooth;
   scroll-margin-top: 500px;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -120,13 +121,13 @@ a {
 
 /* ---------------------------------------------------------- Mid Container ---------------------------------------------------------- */
 .mid-container {
+  display: block;
   font-size: 5rem;
-  margin-top: -10px;
   margin-left: -25px;
   padding-top: 10px;
+  margin-top: -20px;
   background-color: whitesmoke;
   width: 100vw;
-  height: calc(100vh - 80px);
 }
 
 .mid-div {
@@ -188,11 +189,12 @@ a {
   text-align: left;
   font-weight: 450;
   color: #b7b7b7;
-  transition: font-weight 0.45s ease-out;
+  transition: 0.45s ease-out;
 }
+
 .mid-title-3:hover {
   font-weight: 650;
-  transition: font-weight 0.45s ease-out;
+  transition: 0.45s ease-out;
 }
 
 .mid-title-4 {
@@ -230,16 +232,23 @@ a {
 /* ---------------------------------------------------------- Video Library ---------------------------------------------------------- */
 .library-container {
   position: relative;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 2rem;
-  display: inline-block;
 }
 
-.library-title-container {
-  display: block;
+.library-row {
+  display: flex;
   width: 100%;
+  justify-content: center;
+}
+
+.library-video-container {
+  margin: 10px;
+  padding: 10px;
+  float: left;
+  width: calc(33% - 40px);
+  padding-bottom: 0px;
+  transition: 0.3s ease;
+  /* border-radius: 10px; */
+  /* background-color: red; */
 }
 
 .library-title {
@@ -257,7 +266,6 @@ a {
   color: transparent;
   font-family: "Clash-Semibold";
   font-weight: 600;
-  margin-left: 15px;
   line-height: 1;
   text-align: center;
   font-size: 10vw;
@@ -271,28 +279,19 @@ a {
   width: 100%;
 }
 
-.library-video-container {
-  margin: 10px;
-  padding: 10px;
-  float: left;
-  width: calc(33% - 40px);
-  padding-bottom: 0px;
-  transition: 0.3s ease;
-  /* border-radius: 10px; */
-  /* background-color: red; */
-}
-
 .library-video {
   object-fit: cover;
   height: 250px;
   width: 100%;
   border-radius: 10px;
-  transition: 0.5s ease;
-  border: 2px solid transparent;
+  transition: 0.3s ease-in;
+  background-color: green;
+  margin-bottom: 5px;
+  background: url(Assets/Placeholder/Placeholder_001.png);
+  background-size: 100%;
 }
 
 .library-video:hover {
-  transition: 0.5s ease;
   cursor: pointer;
   border: 2px solid white;
 }
@@ -401,7 +400,7 @@ a {
 
   .nav-logo-text {
     line-height: 1;
-    font-size: 1.4rem; /* 1.3rem */
+    font-size: 1rem; /* 1.3rem */
     font-weight: 500;
     float: left;
     margin-right: 10px;
@@ -441,7 +440,7 @@ a {
 
   .nav-tabs-text {
     line-height: 1;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-left: 10px;
     margin-right: 10px;
@@ -518,54 +517,49 @@ a {
   }
 
   /* ---------------------------------------------------------- Video Library ---------------------------------------------------------- */
+  .library-row {
+    display: block;
+  }
+
+  .library-video-container {
+    width: 100%;
+    margin-left: 0px;
+    transition: 0.3s ease;
+  }
+
   .library-title-1 {
     color: transparent;
     font-family: "Clash-Semibold";
     font-weight: 600;
-    margin-left: 15px;
     line-height: 1;
     text-align: center;
     font-size: 10vw;
-    margin-top: 8%;
-    margin-bottom: 3%;
-    -webkit-text-stroke: 0.3px white;
-  }
-  .library-container {
-    position: relative;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 2rem;
-    display: inline-block;
+    -webkit-text-stroke: 2px white;
   }
 
-  .library-title-container {
-    display: block;
+  .line-fw {
+    border: 2px solid rgb(172, 172, 172);
     width: 100%;
-  }
-
-  .library-video-container {
-    margin: 10px;
-    padding: 10px;
-    float: left;
-    width: calc(100% - 40px);
-    padding-bottom: 0px;
-    transition: 0.3s ease;
-    /* border-radius: 10px; */
-    /* background-color: red; */
   }
 
   .library-video {
-    height: auto;
-    width: 100%;
-    border-radius: 10px;
     object-fit: cover;
-    transition: 0.5s ease;
+    height: 250px;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+    margin-bottom: 5px;
+    background: url(Assets/Placeholder/Placeholder_001.png);
+    background-size: 100%;
+  }
+
+  .library-video:hover {
+    cursor: pointer;
+    border: 2px solid white;
   }
 
   .library-video-title {
     color: white;
-    font-size: 6vw;
+    font-size: 2rem;
     line-height: 1;
     font-weight: 500;
     margin-top: 10px;
@@ -574,7 +568,7 @@ a {
 
   .library-video-description {
     color: white;
-    font-size: 3vw;
+    font-size: 1rem;
     line-height: 1;
     margin-top: 10px;
     font-weight: 400;
@@ -592,7 +586,7 @@ a {
   /* ---------------------------------------------------------- Footer ---------------------------------------------------------- */
   .footer {
     background-color: inherit;
-    min-width: 10%;
+    min-width: 100%;
   }
 
   .footer-content {
@@ -601,7 +595,7 @@ a {
     font-size: 4vw;
     line-height: 1;
     font-weight: 500;
-    width: 30%;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: auto;
