@@ -534,7 +534,7 @@ a {
     line-height: 1;
     text-align: center;
     font-size: 10vw;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 0.8px white;
   }
 
   .line-fw {
