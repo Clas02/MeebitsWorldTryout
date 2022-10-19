@@ -1,6 +1,5 @@
 body {
   padding: 15px;
-  padding-top: 90px;
   background-color: #111111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -129,6 +128,7 @@ a {
   margin-top: -20px;
   background-color: whitesmoke;
   width: 100vw;
+  height: 100vh;
 }
 
 .mid-div {
@@ -286,9 +286,9 @@ a {
   width: 100%;
   border-radius: 10px;
   transition: 0.3s ease-in;
-  background-color: green;
   margin-bottom: 5px;
-  background-color: red;
+  background-image: url(Assets/Placeholder/Placeholder_001.png);
+  background-size: 153%;
 }
 
 .library-video:hover {
@@ -450,10 +450,10 @@ a {
 
   /* ---------------------------------------------------------- Mid Container ---------------------------------------------------------- */
   .mid-container {
-    font-size: 4rem;
+    font-size: 3.7rem;
     margin-top: -10px;
     margin-left: -25px;
-    padding-top: 1px;
+    padding-top: 100px;
     background-color: whitesmoke;
     width: 100vw;
     min-height: 91vh;
