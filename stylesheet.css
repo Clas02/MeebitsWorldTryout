@@ -4,6 +4,7 @@ body {
   background-color: #111111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 * {
@@ -287,8 +288,7 @@ a {
   transition: 0.3s ease-in;
   background-color: green;
   margin-bottom: 5px;
-  background: url(Assets/Placeholder/Placeholder_001.png);
-  background-size: 100%;
+  background-color: red;
 }
 
 .library-video:hover {
@@ -384,7 +384,7 @@ a {
   /* ---------------------------------------------------------- Navigation #1 ---------------------------------------------------------- */
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .navigation {
-      -webkit-backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(40px);
       backdrop-filter: blur(10px);
       background-color: #11111175;
     }
@@ -525,6 +525,8 @@ a {
     width: 100%;
     margin-left: 0px;
     transition: 0.3s ease;
+    margin-top: 50px;
+    z-index: 5;
   }
 
   .library-title-1 {
@@ -533,8 +535,8 @@ a {
     font-weight: 600;
     line-height: 1;
     text-align: center;
-    font-size: 10vw;
-    -webkit-text-stroke: 0.8px white;
+    font-size: 2.5rem;
+    -webkit-text-stroke: 0.5px white;
   }
 
   .line-fw {
@@ -548,13 +550,11 @@ a {
     border-radius: 10px;
     transition: 0.3s ease-in;
     margin-bottom: 5px;
-    background: url(Assets/Placeholder/Placeholder_001.png);
-    background-size: 100%;
   }
 
   .library-video:hover {
     cursor: pointer;
-    border: 2px solid white;
+    border: none;
   }
 
   .library-video-title {
